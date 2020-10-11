@@ -1,0 +1,30 @@
+//- layout.pug 2020.06.09
+//- 首頁與內頁的 header class有一個不同，首頁有加「transparent」，內頁都沒有
+//- 首頁與內頁的 body class不同，首頁有加「transparent-sticky-header」，內頁要移除不然 header 會壞
+include _mixins
+doctype html
+html
+    block vars
+        - var bodyClass = ''
+        - var headerClass = 'header--dark'
+        - var module=''
+    head
+        meta(charset='utf-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1.0')
+        meta(http-equiv='X-UA-Compatible', content='IE=edge')
+        meta(name='description', content='')
+        link(rel='icon', href='images/favicon.png', type='image/svg+xml',sizes="any" )
+        title 前端阿翰〔陳政翰〕
+        include _head
+    //-新增變數區塊，使首頁、內頁body class不同
+
+    body
+        block header
+            header.header(class=headerClass)
+                include  _header
+        block content
+        block footer
+            include _footer
+        block js
+            include _js
+

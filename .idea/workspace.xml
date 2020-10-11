@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2d1c7d16-2b4c-459c-a134-56f2b3f4a919" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Pug File" />
+        <option value="JavaScript File" />
+        <option value="SCSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1ig4mJx9HbvyKRALWCduQRemAEy" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/website" />
+    <property name="list.type.of.created.stylesheet" value="SCSS" />
+    <property name="settings.editor.selected.configurable" value="watcher.settings" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\xampp\htdocs\my-portfolio\website" />
+      <recent name="D:\xampp\htdocs\my-portfolio\website\css\scss" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2d1c7d16-2b4c-459c-a134-56f2b3f4a919" name="Default Changelist" comment="" />
+      <created>1602316058754</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1602316058754</updated>
+      <workItem from="1602316059806" duration="15807000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="690" y="369" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1602316187957">
+      <screen x="0" y="46" width="1920" height="1154" />
+    </state>
+    <state x="690" y="369" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.46.1920.1154/-1200.-453.1200.1880@0.46.1920.1154" timestamp="1602316187957" />
+    <state x="622" y="399" key="EditFileWatcherDialog" timestamp="1602316234167">
+      <screen x="0" y="46" width="1920" height="1154" />
+    </state>
+    <state x="622" y="399" key="EditFileWatcherDialog/0.46.1920.1154/-1200.-453.1200.1880@0.46.1920.1154" timestamp="1602316234167" />
+    <state x="461" y="267" key="SettingsEditor" timestamp="1602316234883">
+      <screen x="0" y="46" width="1920" height="1154" />
+    </state>
+    <state x="461" y="267" key="SettingsEditor/0.46.1920.1154/-1200.-453.1200.1880@0.46.1920.1154" timestamp="1602316234883" />
+    <state x="616" y="292" key="run.anything.popup" timestamp="1602390831099">
+      <screen x="0" y="46" width="1920" height="1154" />
+    </state>
+    <state x="616" y="292" key="run.anything.popup/0.46.1920.1154/-1200.-453.1200.1880@0.46.1920.1154" timestamp="1602390831099" />
+    <state x="751" y="481" key="scopes" timestamp="1602316221391">
+      <screen x="0" y="46" width="1920" height="1154" />
+    </state>
+    <state x="751" y="481" key="scopes/0.46.1920.1154/-1200.-453.1200.1880@0.46.1920.1154" timestamp="1602316221391" />
+    <state x="623" y="299" width="672" height="678" key="search.everywhere.popup" timestamp="1602392389378">
+      <screen x="0" y="46" width="1920" height="1154" />
+    </state>
+    <state x="623" y="299" width="672" height="678" key="search.everywhere.popup/0.46.1920.1154/-1200.-453.1200.1880@0.46.1920.1154" timestamp="1602392389378" />
+  </component>
+</project>

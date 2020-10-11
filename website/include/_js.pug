@@ -1,0 +1,25 @@
+//- ======================================
+//- bs & jquery
+//- ======================================
+//script(src='https://code.jquery.com/jquery-3.5.1.slim.min.js' integrity='sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj' crossorigin='anonymous')
+//script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js' integrity='sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV' crossorigin='anonymous')
+
+- if (module === 'index' || module === 'pdt-detail' )
+    //- 只有 index, pdt-detail 載入
+    //-script(defer type='text/javascript', src='js/slick.min.js')
+
+//- ======================================
+// 全站共用
+//- ======================================
+
+
+script(src='js/all.js', type='text/javascript')
+
+- if (module === 'pdt-detail' )
+    // 只有 pdt-detail 載入
+    //-
+        script(src='js/plugin/smoothproducts.js')
+        script(type='text/javascript').
+            $(window).load(function () {
+                $('.sp-wrap').smoothproducts();
+            });
