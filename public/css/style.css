@@ -1282,11 +1282,6 @@ body {
   align-items: center;
 }
 
-.header .icon-svg {
-  width: 16px;
-  height: 16px;
-}
-
 .browser-window {
   margin-top: 10px;
   width: 98vw;
@@ -1327,6 +1322,8 @@ body {
   border-top-right-radius: 0;
 }
 .browser-tabbar ul.browser-tabs .tab-title .favicon {
+  width: 16px;
+  height: 16px;
   margin-right: 7px;
   vertical-align: text-top;
 }
@@ -1380,7 +1377,7 @@ body {
 .browser-toolbar {
   background-color: #fff;
   border-bottom: 1px solid #DADCE0;
-  height: 38px;
+  height: 39px;
   padding: 5px 14px 5px;
 }
 .browser-toolbar .browser-function-button {
@@ -1392,19 +1389,17 @@ body {
   margin-right: 5px;
 }
 .browser-toolbar .browser-function-button ul.basic-button li {
-  margin: 0 4px 0;
-  width: 26px;
-  height: 26px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.browser-toolbar .browser-function-button ul.basic-button li:hover {
-  background-color: #eee;
-  border-radius: 50%;
+  padding: 2px 3px;
 }
 .browser-toolbar .browser-function-button ul.basic-button .icon-svg {
   fill: #404348;
+  width: 25px;
+  height: 25px;
+  padding: 4px;
+}
+.browser-toolbar .browser-function-button ul.basic-button .icon-svg:hover {
+  border-radius: 50%;
+  background-color: #EEEEEE;
 }
 .browser-toolbar .browser-function-button .btn-prev .icon-svg {
   fill: #BABCBE;
@@ -1412,7 +1407,7 @@ body {
 .browser-toolbar .browser-function-button .search-bar {
   position: relative;
   display: inline-block;
-  width: 50%;
+  width: 86%;
 }
 .browser-toolbar .browser-function-button .search-bar ::-moz-selection {
   background-color: #AECBFA;
@@ -1440,14 +1435,22 @@ body {
 .browser-toolbar .browser-function-button .search-bar .url-icons {
   position: absolute;
   top: 0;
-}
-.browser-toolbar .browser-function-button .search-bar .url-icons svg {
   width: 12px;
   height: 12px;
+}
+.browser-toolbar .browser-function-button .search-bar .url-icons svg {
   fill: #626365;
 }
 .browser-toolbar .browser-function-button .search-bar .icon-ssl {
   left: 15px;
+}
+.browser-toolbar .browser-function-button .search-bar .icon-star {
+  right: 15px;
+  width: 17px;
+  height: 17px;
+}
+.browser-toolbar .browser-function-button .search-bar .icon-star svg {
+  fill: #313131;
 }
 
 /*==========================================================================================================*/

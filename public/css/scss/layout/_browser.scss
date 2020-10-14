@@ -48,6 +48,8 @@
 
         .tab-title {
             .favicon {
+                width: 16px;
+                height: 16px;
                 margin-right: 7px;
                 vertical-align: text-top;
             }
@@ -116,7 +118,7 @@
 .browser-toolbar {
     background-color: #fff;
     border-bottom: 1px solid #DADCE0;
-    height: 38px;
+    height: 39px;
     padding: 5px 14px 5px;
 
     .browser-function-button {
@@ -128,23 +130,20 @@
         ul.basic-button {
             display: flex;
             margin-right: 5px;
-
             li {
-                margin: 0 4px 0;
-                width: 26px;
-                height: 26px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-
-                &:hover {
-                    background-color: #eee;
-                    border-radius: 50%;
-                }
+                padding: 2px 3px;
             }
 
             .icon-svg {
                 fill: #404348;
+                width: 25px;
+                height: 25px;
+                padding: 4px;
+
+                &:hover {
+                    border-radius: 50%;
+                    background-color: #EEEEEE;
+                }
             }
         }
 
@@ -155,7 +154,7 @@
         .search-bar {
             position: relative;
             display: inline-block;
-            width: 50%;
+            width: 86%;
 
             @include selection {
                 background-color: #AECBFA;
@@ -185,14 +184,23 @@
             .url-icons{
                 position: absolute;
                 top: 0;
+                width: 12px;
+                height: 12px;
                 svg {
-                    width: 12px;
-                    height: 12px;
                     fill: #626365;
                 }
             }
             .icon-ssl {
                 left: 15px;
+            }
+            .icon-star {
+                right: 15px;
+                width: 17px;
+                height: 17px;
+                svg {
+                    fill: #313131;
+
+                }
             }
 
         }
