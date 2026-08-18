@@ -1,5 +1,5 @@
 import { GitHubIcon, LinkedInIcon } from './Icons'
-import avatarImg from '../assets/avatar.png'
+import avatarImg from '../assets/avatar.webp'
 
 const watermarkText = 'DESIGNER WHO CODES \u00b7 FRONTEND ENGINEER \u00b7 '
 

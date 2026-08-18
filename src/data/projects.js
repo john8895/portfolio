@@ -1,5 +1,5 @@
-import airQualityImg from '../assets/air-quality.jpg'
-import reactShopImg from '../assets/react-shop.png'
+import airQualityImg from '../assets/air-quality.webp'
+import reactShopImg from '../assets/react-shop.webp'
 
 const projects = [
   {
