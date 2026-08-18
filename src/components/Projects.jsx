@@ -1,3 +1,4 @@
+import { GitHubIcon, ExternalLinkIcon } from './Icons'
 import airQualityImg from '../assets/air-quality.png'
 import reactShopImg from '../assets/react-shop.png'
 
@@ -19,15 +20,6 @@ const projects = [
     demo: 'https://john8895.github.io/react-shop/',
     github: 'https://github.com/john8895/react-shop',
     image: reactShopImg,
-  },
-  {
-    title: 'WannaEat 午餐團訂',
-    description:
-      '真實使用中的辦公室午餐工具。建立訂單、選餐廳、彙整品項、追蹤付款。從 LocalStorage 迭代到完整後端。',
-    tags: ['Vue 3', 'PHP', 'MySQL', 'Full-stack'],
-    demo: 'https://eat.ahan-home.com/',
-    github: 'https://github.com/john8895/wanna-eat',
-    image: null,
   },
 ]
 
@@ -53,17 +45,11 @@ export default function Projects() {
               rel="noopener noreferrer"
               className="sm:w-1/2 flex-shrink-0 aspect-video bg-bg-surface dark:bg-bg-surface-dark border border-border dark:border-border-dark rounded-lg overflow-hidden flex items-center justify-center hover:border-accent dark:hover:border-accent-dark transition-colors cursor-pointer"
             >
-              {project.image ? (
-                <img
-                  src={project.image}
-                  alt={`${project.title} screenshot`}
-                  className="w-full h-full object-cover object-top"
-                />
-              ) : (
-                <span className="font-[family-name:var(--font-mono)] text-xs text-text-muted dark:text-text-muted-dark">
-                  [ screenshot ]
-                </span>
-              )}
+              <img
+                src={project.image}
+                alt={`${project.title} screenshot`}
+                className="w-full h-full object-cover object-top"
+              />
             </a>
 
             {/* Info */}
@@ -84,22 +70,23 @@ export default function Projects() {
                   </span>
                 ))}
               </div>
-              <div className="flex gap-4">
+              <div className="flex gap-4 items-center">
                 <a
                   href={project.demo}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="font-[family-name:var(--font-mono)] text-sm text-accent dark:text-accent-dark hover:text-accent-hover dark:hover:text-accent-hover-dark transition-colors"
+                  className="flex items-center gap-1.5 font-[family-name:var(--font-mono)] text-sm text-accent dark:text-accent-dark hover:text-accent-hover dark:hover:text-accent-hover-dark transition-colors"
                 >
-                  → Live Demo
+                  <span>🔗</span> Demo
                 </a>
                 <a
                   href={project.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="font-[family-name:var(--font-mono)] text-sm text-accent dark:text-accent-dark hover:text-accent-hover dark:hover:text-accent-hover-dark transition-colors"
+                  className="flex items-center gap-1.5 text-accent dark:text-accent-dark hover:text-accent-hover dark:hover:text-accent-hover-dark transition-colors"
                 >
-                  → GitHub
+                  <GitHubIcon className="w-4 h-4" />
+                  <span className="font-[family-name:var(--font-mono)] text-sm">Code</span>
                 </a>
               </div>
             </div>
