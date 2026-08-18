@@ -1,16 +1,45 @@
-# React + Vite
+# Portfolio — John Chen
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Personal portfolio site for junior frontend engineer interviews.
 
-Currently, two official plugins are available:
+## Live
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+https://john8895.github.io/portfolio/
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **React 19** + **Vite** — fast dev & build
+- **Tailwind CSS 4** — utility-first styling via `@tailwindcss/vite`
+- **gh-pages** — deploy to GitHub Pages
 
-## Expanding the Oxlint configuration
+## Design Decisions
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+- **Editorial aesthetic** — typography-driven, minimal decoration
+- **Cabinet Grotesk** (display) + **Instrument Sans** (body) + **JetBrains Mono** (code)
+- **Single accent color** (#2D5016 olive green) — intentionally uncommon in developer portfolios
+- **Dark mode** — follows system preference, toggleable
+- **Scroll fade-in** — Intersection Observer, no extra dependencies
+- **Email obfuscation** — JS assembly prevents scraping
+
+## Run Locally
+
+```bash
+npm install
+npm run dev
+```
+
+## Deploy
+
+```bash
+npm run deploy
+```
+
+Builds to `dist/` and pushes to `gh-pages` branch.
+
+## Projects Showcased
+
+| Project | Stack | Link |
+|---------|-------|------|
+| 台灣空氣品質地圖 | React, Leaflet, REST API | [Demo](https://john8895.github.io/air-quality/) |
+| AhanStore | React, Vite, Context API | [Demo](https://john8895.github.io/react-shop/) |
+| WannaEat 午餐團訂 | Vue 3, PHP, MySQL | [GitHub](https://github.com/john8895/wanna-eat) |

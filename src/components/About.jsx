@@ -6,7 +6,7 @@ const skills = [
 
 export default function About() {
   return (
-    <section id="about" className="py-16 border-t border-border dark:border-border-dark">
+    <section id="about" className="fade-in py-16 border-t border-border dark:border-border-dark">
       <p className="font-[family-name:var(--font-mono)] text-xs tracking-widest uppercase text-text-muted dark:text-text-muted-dark mb-8">
         About
       </p>

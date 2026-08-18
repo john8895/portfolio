@@ -1,5 +1,5 @@
 import { GitHubIcon, ExternalLinkIcon } from './Icons'
-import airQualityImg from '../assets/air-quality.png'
+import airQualityImg from '../assets/air-quality.jpg'
 import reactShopImg from '../assets/react-shop.png'
 
 const projects = [
@@ -21,6 +21,15 @@ const projects = [
     github: 'https://github.com/john8895/react-shop',
     image: reactShopImg,
   },
+  {
+    title: 'WannaEat 午餐團訂',
+    description:
+      '辦公室午餐團訂工具，建立訂單、選餐廳、彙整品項、追蹤付款。從 LocalStorage 版迭代到 PHP + MySQL 完整後端，累計開發 360 小時。',
+    tags: ['Vue 3', 'PHP', 'MySQL', 'Full-stack'],
+    demo: null,
+    github: 'https://github.com/john8895/wanna-eat',
+    image: null,
+  },
 ]
 
 export default function Projects() {
@@ -34,23 +43,32 @@ export default function Projects() {
         {projects.map((project, i) => (
           <div
             key={project.title}
-            className={`flex flex-col gap-6 ${
+            className={`fade-in flex flex-col gap-6 ${
               i % 2 === 1 ? 'sm:flex-row-reverse' : 'sm:flex-row'
             } sm:gap-10 sm:items-center`}
           >
             {/* Screenshot */}
-            <a
-              href={project.demo}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="sm:w-1/2 flex-shrink-0 aspect-video bg-bg-surface dark:bg-bg-surface-dark border border-border dark:border-border-dark rounded-lg overflow-hidden flex items-center justify-center hover:border-accent dark:hover:border-accent-dark transition-colors cursor-pointer"
-            >
-              <img
-                src={project.image}
-                alt={`${project.title} screenshot`}
-                className="w-full h-full object-cover object-top"
-              />
-            </a>
+            {project.image ? (
+              <a
+                href={project.demo}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="sm:w-1/2 flex-shrink-0 aspect-video bg-bg-surface dark:bg-bg-surface-dark border border-border dark:border-border-dark rounded-lg overflow-hidden flex items-center justify-center hover:border-accent dark:hover:border-accent-dark transition-colors cursor-pointer"
+              >
+                <img
+                  src={project.image}
+                  alt={`${project.title} screenshot`}
+                  className="w-full h-full object-cover object-top"
+                  loading="lazy"
+                />
+              </a>
+            ) : (
+              <div className="sm:w-1/2 flex-shrink-0 aspect-video bg-bg-surface dark:bg-bg-surface-dark border border-border dark:border-border-dark rounded-lg flex items-center justify-center">
+                <span className="font-[family-name:var(--font-mono)] text-xs text-text-muted dark:text-text-muted-dark">
+                  Full-stack project — see GitHub for details
+                </span>
+              </div>
+            )}
 
             {/* Info */}
             <div className="sm:w-1/2">
@@ -71,14 +89,16 @@ export default function Projects() {
                 ))}
               </div>
               <div className="flex gap-4 items-center">
-                <a
-                  href={project.demo}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-1.5 font-[family-name:var(--font-mono)] text-sm text-accent dark:text-accent-dark hover:text-accent-hover dark:hover:text-accent-hover-dark transition-colors"
-                >
-                  <span>🔗</span> Demo
-                </a>
+                {project.demo && (
+                  <a
+                    href={project.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-1.5 font-[family-name:var(--font-mono)] text-sm text-accent dark:text-accent-dark hover:text-accent-hover dark:hover:text-accent-hover-dark transition-colors"
+                  >
+                    <span>🔗</span> Demo
+                  </a>
+                )}
                 <a
                   href={project.github}
                   target="_blank"
