@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   --color-bg: #FAFAF8;
   --color-bg-surface: #F0F0EC;
@@ -15,8 +17,8 @@
   --color-text-primary-dark: #E8E8E6;
   --color-text-secondary-dark: #9A9A9A;
   --color-text-muted-dark: #6B6B6B;
-  --color-accent-dark: #5A9A2F;
-  --color-accent-hover-dark: #6DB33A;
+  --color-accent-dark: #85CC4A;
+  --color-accent-hover-dark: #9BD862;
   --color-border-dark: #333333;
 
   --font-display: 'Cabinet Grotesk', sans-serif;
@@ -51,4 +53,9 @@ body {
 .fade-in.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+@keyframes gentle-sway {
+  0%, 100% { transform: translateX(var(--tw-translate-x, 0)) rotate(0deg); }
+  50% { transform: translateX(var(--tw-translate-x, 0)) rotate(2deg); }
 }
