@@ -1,4 +1,4 @@
-import { GitHubIcon, MailIcon } from './Icons'
+import { GitHubIcon, LinkedInIcon, MailIcon } from './Icons'
 
 function handleEmail() {
   const u = 'paiching01'
@@ -34,6 +34,15 @@ export default function Contact() {
         >
           <GitHubIcon className="w-5 h-5" />
           <span className="font-[family-name:var(--font-mono)] text-sm">GitHub</span>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/john8895/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-2 text-accent dark:text-accent-dark hover:text-accent-hover dark:hover:text-accent-hover-dark transition-colors py-2.5"
+        >
+          <LinkedInIcon className="w-5 h-5" />
+          <span className="font-[family-name:var(--font-mono)] text-sm">LinkedIn</span>
         </a>
       </div>
     </section>

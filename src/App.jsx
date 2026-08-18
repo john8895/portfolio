@@ -1,18 +1,17 @@
 import { useState, useEffect } from 'react'
+import { Routes, Route, useLocation } from 'react-router-dom'
+import { AnimatePresence } from 'framer-motion'
 import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import Projects from './components/Projects'
-import About from './components/About'
-import Contact from './components/Contact'
 import Footer from './components/Footer'
-import useFadeIn from './hooks/useFadeIn'
+import Home from './pages/Home'
+import ProjectDetail from './pages/ProjectDetail'
 
 function App() {
   const [darkMode, setDarkMode] = useState(() => {
-    if (typeof window !== 'undefined') {
-      return window.matchMedia('(prefers-color-scheme: dark)').matches
-    }
-    return false
+    if (typeof window === 'undefined') return false
+    const saved = localStorage.getItem('darkMode')
+    if (saved !== null) return saved === 'true'
+    return window.matchMedia('(prefers-color-scheme: dark)').matches
   })
 
   useEffect(() => {
@@ -21,18 +20,40 @@ function App() {
     } else {
       document.documentElement.classList.remove('dark')
     }
+    localStorage.setItem('darkMode', String(darkMode))
   }, [darkMode])
 
-  useFadeIn()
+  // Sync with system preference changes
+  useEffect(() => {
+    const mq = window.matchMedia('(prefers-color-scheme: dark)')
+    const handler = (e) => {
+      // Only sync if user hasn't manually overridden
+      if (localStorage.getItem('darkMode') === null) {
+        setDarkMode(e.matches)
+      }
+    }
+    mq.addEventListener('change', handler)
+    return () => mq.removeEventListener('change', handler)
+  }, [])
+
+  const location = useLocation()
 
   return (
     <div className="min-h-screen">
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[100] focus:px-4 focus:py-2 focus:bg-accent focus:text-white focus:rounded focus:text-sm"
+      >
+        Skip to content
+      </a>
       <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
-      <main className="max-w-[960px] mx-auto px-6">
-        <Hero />
-        <Projects />
-        <About />
-        <Contact />
+      <main id="main-content">
+        <AnimatePresence mode="wait">
+          <Routes location={location} key={location.pathname}>
+            <Route path="/" element={<Home />} />
+            <Route path="/projects/:slug" element={<ProjectDetail />} />
+          </Routes>
+        </AnimatePresence>
       </main>
       <Footer />
     </div>
