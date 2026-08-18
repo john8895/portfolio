@@ -1,3 +1,6 @@
+import airQualityImg from '../assets/air-quality.png'
+import reactShopImg from '../assets/react-shop.png'
+
 const projects = [
   {
     title: '台灣空氣品質地圖',
@@ -6,6 +9,7 @@ const projects = [
     tags: ['React 19', 'Leaflet', 'REST API', 'Tailwind'],
     demo: 'https://john8895.github.io/air-quality/',
     github: 'https://github.com/john8895/air-quality',
+    image: airQualityImg,
   },
   {
     title: 'AhanStore',
@@ -14,6 +18,7 @@ const projects = [
     tags: ['React 19', 'Vite', 'useContext', 'FakeStoreAPI'],
     demo: 'https://john8895.github.io/react-shop/',
     github: 'https://github.com/john8895/react-shop',
+    image: reactShopImg,
   },
   {
     title: 'WannaEat 午餐團訂',
@@ -22,6 +27,7 @@ const projects = [
     tags: ['Vue 3', 'PHP', 'MySQL', 'Full-stack'],
     demo: 'https://eat.ahan-home.com/',
     github: 'https://github.com/john8895/wanna-eat',
+    image: null,
   },
 ]
 
@@ -40,16 +46,24 @@ export default function Projects() {
               i % 2 === 1 ? 'sm:flex-row-reverse' : 'sm:flex-row'
             } sm:gap-10 sm:items-center`}
           >
-            {/* Screenshot placeholder */}
+            {/* Screenshot */}
             <a
               href={project.demo}
               target="_blank"
               rel="noopener noreferrer"
-              className="sm:w-1/2 flex-shrink-0 aspect-video bg-bg-surface dark:bg-bg-surface-dark border border-border dark:border-border-dark rounded-lg flex items-center justify-center hover:border-accent dark:hover:border-accent-dark transition-colors cursor-pointer"
+              className="sm:w-1/2 flex-shrink-0 aspect-video bg-bg-surface dark:bg-bg-surface-dark border border-border dark:border-border-dark rounded-lg overflow-hidden flex items-center justify-center hover:border-accent dark:hover:border-accent-dark transition-colors cursor-pointer"
             >
-              <span className="font-[family-name:var(--font-mono)] text-xs text-text-muted dark:text-text-muted-dark">
-                [ screenshot ]
-              </span>
+              {project.image ? (
+                <img
+                  src={project.image}
+                  alt={`${project.title} screenshot`}
+                  className="w-full h-full object-cover object-top"
+                />
+              ) : (
+                <span className="font-[family-name:var(--font-mono)] text-xs text-text-muted dark:text-text-muted-dark">
+                  [ screenshot ]
+                </span>
+              )}
             </a>
 
             {/* Info */}
